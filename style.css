@@ -1,0 +1,515 @@
+/*_Yumicode 2021*/
+/*Thank you Erik Terwan for your toggle checkbox */
+
+/*-------main------*/
+
+
+* {
+/*box-model*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+/*typography*/
+   font-family: 'Montserrat', sans-serif;
+   
+}
+
+a {
+/*typography*/
+   text-decoration: none; 
+   color: #000;
+}
+
+
+li {
+/*typography*/
+   list-style: none;
+}
+
+
+/*-------------title section*/
+
+.headband {
+/*box-model*/
+   padding: 0rem;  
+   
+}
+
+/*LOGO-----*/
+.logo {
+/*display*/
+   width: 100%;
+   max-width: 15rem;
+   height: auto;
+   transition-duration: 0.3s;
+} 
+
+.logo:hover { 
+   transform: rotate(-1deg);                            
+}
+               
+.logo-box {  
+/*box-model*/
+   margin-top: 2rem;
+   margin-left: 3rem;
+/*display*/
+   display: inline-block;
+/*postioning*/
+   position: relative;
+   top: 1rem;
+   left: 1rem;
+}
+
+/*NAVBAR-----*/
+.navbar {
+/*box-model*/
+   padding-top: 5rem;
+}
+
+.navbar-menu {
+/*box-model*/
+   padding-left: 0rem;
+/*display */
+   display: inline-block;
+/*positioning*/
+   position: relative;
+   top: -1.5rem;
+}
+
+.nav-item {
+/*box-model*/
+   margin-left: 3rem;
+   margin-right: 3rem;
+   padding-left: 1rem;
+/*display*/
+   display: inline-flex;  
+/*typography*/
+   list-style: none;
+   text-transform: uppercase;
+   font-size: 1.25rem; 
+}
+
+.nav-link {
+/*display*/
+   display: block;
+}
+
+.nav-item-box {
+/*display*/
+   text-align: center;  
+   
+}
+
+.nav-item-box:hover .nav-underline {
+/*display*/
+   opacity: 1;
+      
+}
+
+.nav-underline {
+/*display*/
+   width: 5rem;
+   opacity: 0;
+   transition: ease-in-out 0.25s;
+}
+
+#menuToggle {
+/*display*/
+   display: none;
+}
+
+
+/*SOCIAL MEDIA-----*/
+.icon-socialmedia {
+/*position*/
+   position: absolute;
+   top: 3rem;
+   right: 2rem;
+/*display*/
+   display:none;
+   font-size: 1.15rem;   
+}
+
+.icon-box {
+/*box-model*/
+   margin-left: 1.50rem;
+/*display*/
+   color: #AFAFAF;   
+}
+
+/*HEADER-----*/
+.header-band {
+/*display*/
+   background-color: #F6C896;
+   opacity: 0.65;
+   height: 20rem;
+   width: 100%;
+/*positioning*/
+   position: absolute;
+   top: 9rem;
+}
+
+.header-picture {
+/*box-model*/
+   margin-top: 2rem;
+/*display*/
+   width: 25rem;
+/*positioning*/
+   position: relative;
+   left: 7rem;
+}
+
+.header-themes {
+/*display*/
+   display: flex;
+   flex-direction: column;
+/*positioning*/
+   position: absolute;
+   top: 11rem;
+   right: 20rem;
+}
+
+.header-item {
+/*box-model*/
+   padding: 0.75rem;
+   margin: 0.5rem;
+/*display*/
+   background-color: #fff;
+   text-align: center;
+/*typography*/
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 1.5rem;
+   font-weight: 800;
+   letter-spacing: 0.15rem;
+/*effect*/
+   transition-duration: 0.25s;
+}
+
+.header-item:hover, .header-item:focus, .header-item:active {
+       transform: scale(1.1);
+       transition-duration: 0.25s;
+}
+
+.header-welcome {
+/*positioning*/
+   position: absolute;
+   left: 30rem;
+   top: 32rem;
+/*box-model*/
+   
+/*display*/
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+.header-welcome-intro {
+/*box-model*/
+   padding-left: 5rem;
+   padding-right:6rem;
+   padding-bottom: 1.5rem;
+/*typography*/
+   font-family: 'Josefin Sans', sans-serif;
+/*display*/
+   line-height: 1.5rem;
+}
+
+.hd-welcome-themes {
+/*positioning*/
+   position: relative;
+   top: 1rem;
+   left: -1rem;   
+/*typography*/
+   font-family: 'Palanquin', sans-serif;
+   font-size: 0.75rem;
+   letter-spacing: 0.20rem;
+   text-transform: uppercase;
+/*box-model*/
+   padding-right: 1rem;
+}
+
+
+.hd-welcome-item {
+/*display*/
+   list-style: none;
+   line-height: 1.5rem;
+
+}
+
+ul .hd-welcome-item::before {
+   content: "■";
+   display: inline-block;
+   margin-right: 1rem;
+   font-size: 0.5rem;
+  }
+
+.header-signature {
+/*positioning*/
+   position: relative;
+   top: 2.5rem;
+   right: -15rem;
+/*typography*/
+   font-family: 'Mrs Saint Delafield', sans-serif;
+   font-size: 3.5rem;
+/*box-model*/
+   padding-right: 1rem;
+}
+
+   
+/*-----------START media queries title section------------*/ 
+
+@media screen and (min-width: 1360px) {
+
+.nav-item {
+/*box-model*/
+   padding-left: 5rem;
+
+   }
+}
+
+@media (max-width: 1200px){
+
+.logo-box {
+/*box-model*/
+   margin-top: 2rem;
+   margin-right: 0;
+   margin-left: 0;
+/*display*/
+   display: block;
+	text-align: center;
+   left: 0.25rem;
+/*positioning*/
+   position: relative;
+   
+	}
+   
+.headband {
+/*box-model*/
+   margin:auto;
+/*display*/
+   text-align: center;   
+   }
+
+.navbar-menu {
+/*display*/
+   display: none;
+}
+
+#menuToggle {
+/*display*/
+   display: inline-block;
+/*positioning*/
+   position: relative;
+   top: -4.5rem;
+   right: -5rem;
+   z-index: 1;
+   -webkit-user-select: none;
+          user-select: none;
+}
+
+#menuToggle a {
+/*typography*/
+   text-decoration: none;
+   color: #232323;
+/*effect*/
+   transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #F45053;
+}
+
+#menuToggle input {
+/*display*/
+   display: block;
+   width: 4rem;
+   height: 2rem;
+/*positioning*/
+   position: absolute;
+   top: -1rem;
+   left: -4.5rem;
+   cursor: pointer;
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+ 
+.hamburger {
+/*positioning*/
+   position: absolute;
+   top: -2rem;
+   left: -28rem;
+   
+}
+
+#menuToggle span {
+/*display*/
+   display: block;
+   width: 1.92rem;
+   height: 0.25rem;
+   margin-bottom: 0.25rem;   
+   background: #cdcdcd;
+   border-radius: 1rem;
+/*positioning*/
+   position: relative;
+   top: -0.5rem;
+   left: -3rem;
+/*effect*/
+   z-index: 1;
+   transform-origin: 4px 0px;
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+}
+
+
+#menuToggle span:first-child {
+   transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+   transform-origin: 0% 100%;
+}
+/* 
+ * Transform all the slices of hamburger into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+}
+/*
+ * And the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+   transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ * Make this absolute positioned at the top left of the screen
+ */
+#menu {
+/*positioning*/
+   position: relative;
+/*box-model*/
+   margin: 5rem 0 0 -10rem;
+   padding: 0rem 13rem;
+/*display*/
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+/* to stop flickering of text in safari */
+/*effect*/
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+/*box-model*/
+   padding: 1rem 0;
+/*diplay*/
+   font-size: 1.5rem;
+}
+/*
+ * And let's slide it in from the top
+ */
+#menuToggle input:checked ~ ul {
+   transform: none;
+}
+
+/*
+.nav-item {
+box-model
+   margin-right: 0;
+}
+*/
+
+.header-picture {
+/*box-model*/
+    margin-top: -7rem;
+    margin-left: -4rem;
+}
+
+.header-themes {
+/*display*/
+   display: flex;
+   flex-direction: row;
+/*positioning*/
+   top: 17rem;
+   right: 2.5rem;
+}
+
+}
+
+@media (max-width:480px) {
+
+.header-picture {
+/*box-model*/
+   margin-top: -10rem;
+   margin-left: 0;
+   width: 100%;
+/*positioning*/
+   position: relative;
+   left:0;
+  }
+
+.header-band {
+/*display*/
+   display: none;
+}
+
+.header-item {
+/*display*/
+   display: none;
+  }
+  
+#menu {
+/*box-model*/
+   margin: 5rem 0 0 -10rem;
+   padding: 0rem 6.5rem;
+}
+
+.nav-item {
+/*box-model*/
+   margin-right: 0rem;
+   margin-left: 0;
+}
+
+#menu li {
+/*box-model*/
+   padding: 1rem;
+}
+
+}
+
+/*-----------END media queries title section------------*/
+
+
+
+
+/*-------------theme section*/
+
+
+/*-------------news section*/
+
+
+/*-------------media section*/
+
+
+/*-------------footer section*/
